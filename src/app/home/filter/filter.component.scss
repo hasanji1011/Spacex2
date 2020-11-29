@@ -1,0 +1,42 @@
+.option-block{
+  margin: 10px 0;
+  .option-block-heading{
+    margin: 0 30px 10px;
+    text-align: center;
+    padding-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #000000;
+  }
+}
+.options-list{
+  li{
+    width: 50%;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
+}
+.custom-radio{
+  width: 80px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 0;
+  }
+  span{
+    padding: 5px;
+    display: block;
+    background: rgba(4, 158, 4, 0.3);
+    border-radius: 3px;
+  }
+  input:checked + span,&.active span{
+    background: rgba(4, 158, 4, 1);
+  }
+}

@@ -1,0 +1,8 @@
+<div class="container">
+  <aside>
+    <app-filter (programsData)="filterData($event)"></app-filter>
+  </aside>
+  <main>
+    <app-output-block [data]="programCardData"></app-output-block>
+  </main>
+</div>

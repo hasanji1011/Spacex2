@@ -1,0 +1,29 @@
+<div class="card-wrapper">
+  <h3 *ngIf="data.length === 0">No Data Found</h3>
+  <div *ngFor="let program of data" class="card">
+    <div class="block">
+      <figure>
+        <img src={{program.links.mission_patch_small}} alt={{program.mission_name}}>
+      </figure>
+      <h2>{{program.mission_name}}#{{program.flight_number}}</h2>
+      <div class="program-details">
+        <div>
+          <h3>Mission Ids:</h3>
+          <ul>
+            <li *ngFor="let id of program.mission_id">{{id}}</li>
+          </ul>
+        </div>
+        <div>
+          <span class="label">Launch Year:</span> <span class="value">{{program.launch_year}}</span>
+        </div>
+        <div>
+          <span class="label">Successful Launch:</span> <span class="value">{{program.launch_success}}</span>
+        </div>
+        <div>
+          <span class="label">Successful Landing:</span> <span class="value">{{program.launch_landing}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
